@@ -2,14 +2,14 @@
 title: Scalability
 ---
 
-## Scalability
+# Scalability
 Scalability problems are fairly straightforwards.
 
 1. Make believe - solve for an infinitely powerful computer, no memory limitations
 2. Get real - how much can fit on a single machine? What issues occur when splits occur?
 3. Solve problems - solve the issues identified in step 2.
 
-###### Dividing Up Data
+#### Dividing Up Data
 * By order of appearance - when current machine is full, add another. Can result
 in very large lookup tables
 * By hash value - choose a key and hash it, storing on a machine based on the result.

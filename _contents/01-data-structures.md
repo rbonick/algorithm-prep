@@ -2,8 +2,8 @@
 title: Data Structures
 ---
 
-#### Data Structures
-###### Time Complexity (Average)
+# Data Structures
+### Time Complexity (Average)
 
 | Data Structure      | Access | Search | Insert | Delete |  
 | ------------- |---------------- | ----- | ----- | ------ |
@@ -16,7 +16,7 @@ title: Data Structures
 | Binary Search Tree  | O(log n) | O(log n) | O(log n) | O(log n) |
 | Red-Black Tree      | O(log n) | O(log n) | O(log n) | O(log n) |
 
-###### Time Complexity (Worst)
+### Time Complexity (Worst)
 
 | Data Structure      | Access | Search | Insert | Delete |  
 | ------------- |---------------- |
@@ -29,7 +29,7 @@ title: Data Structures
 | Binary Search Tree  | O(n)     | O(n)     | O(n)     | O(n)     |
 | Red-Black Tree      | O(log n) | O(log n) | O(log n) | O(log n) |
 
-###### Space Complexity
+### Space Complexity
 
 | Data Structure      | Space Complexity |  
 | ------------- |---------------- |

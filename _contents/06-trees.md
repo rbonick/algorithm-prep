@@ -1,20 +1,20 @@
 ---
 title: Trees
 ---
-## Trees
+# Trees
 Tree properties:
 * Full - either 0 or 2 children (no single leaves)
 * Complete - completely filled tree, with possible exception of lowest depth, which is filled from left to right
 * Balanced - depth of leaves does not exceed a particular amount
 
-#### Binary Search Tree
+### Binary Search Tree
 Binary tree (2 children) where the following property always holds:
 
 Let *x* be a node in a binary search tree. If *y* is a node in the left subtree
 of *x*, then *y.key* <= *x.key*. If *y* is a node in the right subtree of *x*,
 then *y.key* >= *x.key*.
 
-###### Searching
+#### Searching
 ```
 find(root, key){
     if(root == null || root.value == key){
@@ -28,7 +28,7 @@ find(root, key){
 }
 ```
 
-###### Insertion
+#### Insertion
 ```
 insert(root, node){
     current = root;
@@ -52,18 +52,24 @@ insert(root, node){
 }
 ```
 
-###### Deletion
+#### Deletion
 ```
 delete(root, node){
-    if(node.left == null){ // nothing on the left, so we can transplant the right child without concerns
+    if(node.left == null){
+        // nothing on the left, so we can transplant the right child without concerns
         transplant(root, node, node.right);
-    } else if (node.right == null){ // nothing on the right, so we can transplant the left child without concerns
+    // nothing on the right, so we can transplant the left child without concerns
+    } else if (node.right == null){
         transplant(root, node, node.left);
     } else {
-        replacement = successor(node); // find successive element, which is the leftmost node in the right subtree
+        // find successive element, which is the leftmost node in the right subtree
+        replacement = successor(node);
         if(replacement.parent != node){
-            // Replacement will be taking the spot of the node, but its right child needs to take its spot
-            transplant(root, replacement, replacement.right); // replace the replacement with its right element to keep the BST intact
+            // Replacement will be taking the spot of the node,
+            // but its right child needs to take its spot
+
+            // Replace the replacement with its right element to keep the BST intact
+            transplant(root, replacement, replacement.right);
             replacement.right = node.right;
             replacement.right.parent = replacement;
         } else {
@@ -89,7 +95,7 @@ transplant(root, uproot, replacement){
 }
 ```
 
-#### Red-Black Trees
+### Red-Black Trees
 A red-black tree is a binary tree with an extra `color` field that satisfies the following criteria:
 * Every node is either red or black
 * The root is black
@@ -97,7 +103,7 @@ A red-black tree is a binary tree with an extra `color` field that satisfies the
 * If a node is red, then both children are black
 * All straight paths from the node to its leaves contains the same number of black nodes
 
-###### Rotations
+#### Rotations
 Since the red-black criteria must be preserved, Oftentimes
 we have to rotate the a particular node right or left.
 
@@ -171,7 +177,7 @@ rightRotate(root, node){
 }
 ```
 
-###### Insertions
+#### Insertions
 ```
 insert(root, node){
     insertPoint = null;
@@ -239,7 +245,7 @@ insertFixup(root, node){
 }
 ```
 
-###### Deletions
+#### Deletions
 ```
 transplant(root, node, replacement){
     if(node.parent == null){

@@ -2,7 +2,7 @@
 title: Threading
 ---
 
-## Threading
+# Threading
 In Java, there are two ways of implementing threads:
 * Implement Runnable interface, and pass class into a Thread constructor
 ** Better if needing to subclass another class, since it is an interface
@@ -14,12 +14,12 @@ In Java, there are two ways of implementing threads:
 
 **Thread**: exists within a process, can access data from the process and its siblings
 
-#### Synchronization and Locks
+### Synchronization and Locks
 Threads within the same process share memory space. This is good, because threads
 can share data, but also can cause memory to be changed by two threads at the same
 time.
 
-###### Synchronized keyword
+#### Synchronized keyword
 **synchronized** restricts access to shared resources. Can be applied to methods
 or code blocks, and restricts threads from executing the code simultaneously
 
@@ -28,11 +28,11 @@ object. For static methods, locks are used on the class (since the static method
 could act on static fields).
 * Code Blocks: same as a method(``` synchronized(this) { // code }```)
 
-###### Lock keyword
+#### Lock keyword
 A lock is used to synchronize access to a resource by associating the resource
 with the lock. Threads must first gain the lock, then can manipulate the resource.
 
-###### Deadlocks
+#### Deadlocks
 A deadlock is where two threads are holding a lock while waiting on a second lock,
 which the other thread is holding.
 

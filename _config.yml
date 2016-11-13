@@ -27,8 +27,10 @@ github_username:  jekyll
 collections:
     contents:
         output: true
-        layout: default
 
+defaults:
+    - values:
+        layout: section
 
 # Build settings
 markdown: kramdown

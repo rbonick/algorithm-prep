@@ -2,9 +2,9 @@
 title: Mathematics
 ---
 
-## Mathematics
-#### Prime Numbers
-###### Naive approach
+# Mathematics
+### Prime Numbers
+#### Naive approach
 ```
 boolean isPrime(int n){
     if(n < 2) {
@@ -21,7 +21,7 @@ boolean isPrime(int n){
 }
 ```
 
-###### Improvement
+#### Improvement
 One thing to note is that you only actually need to check values to the square root
 (since anything above the square root would have a smaller number that would be
 the other multiple e.g. 10 = 2x5, only need to check through 4)
@@ -45,7 +45,7 @@ boolean isPrime(int n){
 }
 ```
 
-###### Sieve of Eratosthenes
+#### Sieve of Eratosthenes
 Since all non-primes are divisible by primes, find primes and then iterate
 through and cross off all multiples of that prime up to some max.
 
@@ -85,8 +85,8 @@ boolean[] sieveOfEratosthenes(int max){
 }
 ```
 
-####Probability
-###### Probability of P(A & B)
+### Probability
+#### Probability of P(A & B)
 P(A & B) = P(B given A) P(A)
 
 e.g. (when picking a number between 1 and 10, inclusive)
@@ -96,7 +96,7 @@ P(x is even and x <= 5) = (2/5) (1/2)
 P(x is even and x <= 5) = 1/5
 ```
 
-###### Probability of P(A | B)
+#### Probability of P(A | B)
 P(A | B) = P(A) + P(B) - P(A & B)
 
 ```
@@ -105,18 +105,18 @@ P(X is even or x <= 5) = (1/2) + (1/2) - (1/5)
 P(X is even or x <= 5) = 4/5
 ```
 
-###### Independence
+#### Independence
 If A and B are independent, knowing one doesn't tell you anything about the
 other.
 
 P(A & B) = P(A) P(B), i.e. P(B given A) = P(B)
 
-###### Mutual Exclusivity
+#### Mutual Exclusivity
 If A and B are mutually exclusive, then the other cannot happen.
 
 P(A | B) = P(A) + P(B), i.e. P(A & B) = 0
 
-###### Combinatorics
+#### Combinatorics
 Combinations: nCr (from n choose r) = n! / ((n-r)!r!)
 
 Permutations: nPr (from n choose r, order matters) = n! / (n-r)!

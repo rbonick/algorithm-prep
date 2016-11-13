@@ -2,7 +2,7 @@
 title: Graphs
 ---
 
-## Graphs
+# Graphs
 Graphs are similar to trees, except there is no hierarchy.
 ```
 class GraphNode {
@@ -11,7 +11,7 @@ class GraphNode {
 }
 ```
 
-###### Depth First Search
+### Depth First Search
 ```
 void depthFirstSearch(GraphNode root){
     if(root == null){
@@ -27,7 +27,7 @@ void depthFirstSearch(GraphNode root){
 }
 ```
 
-###### Breadth First Search
+### Breadth First Search
 Important part of BFS is to use a Queue.
 ```
 void breadthFirstSearch(GraphNode node){
