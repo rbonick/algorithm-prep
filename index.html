@@ -2,14 +2,22 @@
 title: Algorithm Prep Guide
 layout: default
 ---
+<h1>Algorithm Prep Guide</h1>
 
-<div class="home">
-  <h1 class="page-heading">Contents</h1>
-    <ol class="post-list">
-        {% for page in site.contents %}
-          <li>
-              <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a>
-          </li>
-        {% endfor %}
-    </ol>
-</div>
+<p>
+    Recently I've spent some time re-learning my data structures and algorithms.
+    I've put together a bit of a study guide / cheat sheet that sums up the
+    important details (runtime, etc.) and includes implementations when
+    possible. It should come in handy for anyone who wants to brush up on their
+    knowledge or for interview preparation.
+</p>
+
+
+<h4>Contents</h1>
+<ol class="post-list">
+    {% for page in site.contents %}
+      <li>
+          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a>
+      </li>
+    {% endfor %}
+</ol>
