@@ -48,3 +48,6 @@ marking all reachable objects as *In Use*. All other objects are marked as
 Method parameters are passed by value, not reference. However, for Objects,
 the value is a pointer to that Object, so changing object fields can work,
 but reassigning the Object is impossible.
+
+### Hashcode / Equals
+TODO
